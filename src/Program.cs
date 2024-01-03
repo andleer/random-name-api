@@ -22,7 +22,7 @@ app.UseStaticFiles();
 
 app.UseCors();
 
-//app.UseAuthorization();
+//app.UseAuthorization(); 
 
 app.MapControllers();
 
