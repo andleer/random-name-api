@@ -1,4 +1,4 @@
-﻿namespace RandomName.Api.Services;
+﻿namespace RandomPeeps.Api.Services;
 
 public static class NameGeneratorData
 {

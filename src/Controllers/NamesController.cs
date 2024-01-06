@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using RandomName.Api.Services;
+using RandomPeeps.Api.Services;
 
-namespace RandomName.Api.Controllers;
+namespace RandomPeeps.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
