@@ -26,12 +26,12 @@ jobs:
         run: dotnet build --configuration Release src
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o /src/RandomPeeps.Api.sln
+        run: dotnet publish -c Release -o src/RandomPeeps.Api/bin/Release/net8.0 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: .net-app
+          name: random-peeps.api
           path: /src/RandomPeeps.Api.sln
 
   deploy:
@@ -45,7 +45,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: .net-app
+          name: random-peeps.api
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
