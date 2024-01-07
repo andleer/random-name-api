@@ -1,1 +1,1 @@
-# random-name-api
+# random-peeps-api
