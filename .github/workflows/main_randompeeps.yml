@@ -23,7 +23,7 @@ jobs:
           include-prerelease: true
 
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore src
   
       - name: Build with dotnet
         run: dotnet build --configuration Release src
