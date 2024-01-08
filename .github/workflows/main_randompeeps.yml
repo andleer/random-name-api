@@ -29,13 +29,14 @@ jobs:
         run: dotnet build --configuration Release src
 
       - name: dotnet publish
-        run: dotnet publish src -c Release --property:PublishDir=src
+        run: dotnet publish src -c Release 
+#        run: dotnet publish src -c Release --property:PublishDir=src
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: random-peeps.api
-          path: artifacts
+          path: ar
 
   deploy:
     runs-on: ubuntu-latest
