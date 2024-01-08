@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: random-peeps.api
-          path: ar
+          path: src
 
   deploy:
     runs-on: ubuntu-latest
