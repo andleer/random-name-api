@@ -1,3 +1,5 @@
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -18,7 +20,12 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseDefaultFiles();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    //FileProvider = new PhysicalFileProvider(
+    //       Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
+    RequestPath = "/static"
+});
 
 app.UseCors();
 
