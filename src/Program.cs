@@ -19,13 +19,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.UseDefaultFiles();
-app.UseStaticFiles(new StaticFileOptions
-{
-    //FileProvider = new PhysicalFileProvider(
-    //       Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
-    RequestPath = "/static"
-});
+app.UseFileServer("static");
 
 app.UseCors();
 
