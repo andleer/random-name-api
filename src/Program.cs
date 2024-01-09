@@ -19,7 +19,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.UseFileServer("static");
+app.UseFileServer("/static");
 
 app.UseCors();
 
