@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Include="wwwroot\index.html" />
     <None Include="static\index.html" />
+
+    <Content Include="static\**" CopyToPublishDirectory="static"/>
   </ItemGroup>
 
 </Project>
